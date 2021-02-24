@@ -1,0 +1,15 @@
+<form (submit)="onSubmit($event)">
+  <div class="form-group">
+    <input
+      #inputAddTodo
+      [(ngModel)]="todo.title"
+      type="text"
+      class="form-control"
+      placeholder="Create a new todo.."
+      name="title"
+    />
+    <button type="button" class="btn btn-primary" (click)="sendMessage()">
+      <fa-icon [icon]="faPlus" style="margin-right: 10px"></fa-icon>Add item
+    </button>
+  </div>
+</form>

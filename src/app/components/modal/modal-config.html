@@ -1,0 +1,27 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Do you want to delete?</h4>
+  </div>
+  <div class="modal-body text-center">
+    <button
+      type="button"
+      class="btn btn-primary mr-5"
+      (click)="d('Cross click') || todoId.emit(id) "
+      aria-label="Close"
+    >
+      Yes
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="d('Cross click')"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">No</span>
+    </button>
+  </div>
+</ng-template>
+
+<button class="btn btn-outline-primary ml-2" (click)="open(content)">
+  Delete
+</button>
